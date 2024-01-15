@@ -1,7 +1,9 @@
+<div style="text-align:center">
+<img src="http://paroquiasaovicentepallotti.org.br/images/logodefault.png" width="200" heigth="auto">
+</div>
+
 ## Projeto Site Para Igreja Católica
-
 Esse é um projeto de site desenvolvido utilizando o framework Laravel 9, criado especificamente para atender às necessidades da comunidade da Igreja Católica. Este site visa proporcionar uma plataforma interativa e informativa para os membros da paróquia, bem como para visitantes interessados.
-
 ## Funcionalidades Principais
 ### 1. Página Inicial
 - Boas-vindas e Carrosel com imagens personalizáveis.

@@ -34,7 +34,7 @@
             @include('layouts.footer')
         </div>
         <a href="https://wa.me/55{{ $whatsapp }}"
-            class="cursor-pointer z-[1000] bg-green-950 rounded-full fixed bottom-10 right-4" target="_blank">
+            class="cursor-pointer z-[1000] bg-green-950 rounded-full fixed right-4" style="bottom: 40px;" target="_blank">
             <span class="fab fa-whatsapp p-4 text-5xl text-white"></span>
         </a>
         </div>

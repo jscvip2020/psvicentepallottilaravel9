@@ -15,7 +15,7 @@
     <div class="container mb-5">
         <h1 class="flex justify-center font-black  text-blue-900 text-4xl">{{ __('Grupos') }}</h1>
     </div>
-    <div class="container mr-auto md:flex md:max-h-[400px]">
+    <div class="container mr-auto md:flex">
         <div class="md:w-1/2 flex justify-center">
             @if (file_exists('images/grupos.jpg'))
                 <img class="grayscale" src="{{ asset('images/grupos.jpg') }}" alt="Grupos">

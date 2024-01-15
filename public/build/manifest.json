@@ -1,0 +1,69 @@
+{
+  "node_modules/flowbite/dist/flowbite.min.js?commonjs-entry": {
+    "file": "assets/flowbite.min-3bbc2e11.js",
+    "isEntry": true,
+    "src": "node_modules/flowbite/dist/flowbite.min.js?commonjs-entry"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-bcc7a4a6.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/fonts/icojscvip.eot": {
+    "file": "assets/icojscvip-2cc3d6db.eot",
+    "src": "resources/css/fonts/icojscvip.eot"
+  },
+  "resources/css/fonts/icojscvip.svg": {
+    "file": "assets/icojscvip-9eb0faca.svg",
+    "src": "resources/css/fonts/icojscvip.svg"
+  },
+  "resources/css/fonts/icojscvip.ttf": {
+    "file": "assets/icojscvip-6719858c.ttf",
+    "src": "resources/css/fonts/icojscvip.ttf"
+  },
+  "resources/css/fonts/icojscvip.woff": {
+    "file": "assets/icojscvip-436787fb.woff",
+    "src": "resources/css/fonts/icojscvip.woff"
+  },
+  "resources/css/style.css": {
+    "file": "assets/style-663df7e0.css",
+    "isEntry": true,
+    "src": "resources/css/style.css"
+  },
+  "resources/fontawesome/css/brands.min.css": {
+    "file": "assets/brands.min-46e42024.css",
+    "isEntry": true,
+    "src": "resources/fontawesome/css/brands.min.css"
+  },
+  "resources/fontawesome/css/fontawesome.min.css": {
+    "file": "assets/fontawesome.min-e08f1465.css",
+    "isEntry": true,
+    "src": "resources/fontawesome/css/fontawesome.min.css"
+  },
+  "resources/fontawesome/css/solid.min.css": {
+    "file": "assets/solid.min-d11709a9.css",
+    "isEntry": true,
+    "src": "resources/fontawesome/css/solid.min.css"
+  },
+  "resources/fontawesome/webfonts/fa-brands-400.ttf": {
+    "file": "assets/fa-brands-400-003f1154.ttf",
+    "src": "resources/fontawesome/webfonts/fa-brands-400.ttf"
+  },
+  "resources/fontawesome/webfonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400-faae6fc0.woff2",
+    "src": "resources/fontawesome/webfonts/fa-brands-400.woff2"
+  },
+  "resources/fontawesome/webfonts/fa-solid-900.ttf": {
+    "file": "assets/fa-solid-900-cea79b34.ttf",
+    "src": "resources/fontawesome/webfonts/fa-solid-900.ttf"
+  },
+  "resources/fontawesome/webfonts/fa-solid-900.woff2": {
+    "file": "assets/fa-solid-900-886c8611.woff2",
+    "src": "resources/fontawesome/webfonts/fa-solid-900.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-1e214dce.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

@@ -23,6 +23,6 @@ class horario extends Model
 
     public function tipoatendimento(): BelongsTo
     {
-        return $this->belongsTo(tipoatendimento::class);
+        return $this->belongsTo(TipoAtendimento::class);
     }
 }

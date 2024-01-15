@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Tipoatendimento extends Model
+class TipoAtendimento extends Model
 {
     use HasFactory;
+
+    protected $table = 'tipoatendimentos';
 
     protected $fillable =[
         'nome',
@@ -20,6 +22,6 @@ class Tipoatendimento extends Model
 
     public function horarios(): HasMany
     {
-        return $this->hasMany(horario::class);
+        return $this->hasMany(horario::class,'tipoatendimento_id');
     }
 }

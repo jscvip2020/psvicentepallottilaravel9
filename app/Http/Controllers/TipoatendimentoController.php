@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grupo;
 use App\Models\horario;
-use App\Models\Tipoatendimento;
+use App\Models\TipoAtendimento;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 

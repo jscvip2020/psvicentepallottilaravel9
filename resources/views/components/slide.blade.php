@@ -1,18 +1,20 @@
 <div>
     <div id="indicators-carousel" class="relative w-full" data-carousel="slide">
         @if (count($images) === 1)
-            <div class="relative h-56 overflow-hidden md:h-[32rem]">
-                @if ($image->url)
-                    <a href="{{ $image->url }}" target="@if (strpos($image->url, 'http') !== false) _blank @endif">
+            @foreach ($images as $image)
+                <div class="relative h-56 overflow-hidden md:h-[32rem]">
+                    @if ($image->url)
+                        <a href="{{ $image->url }}" target="@if (strpos($image->url, 'http') !== false) _blank @endif">
 
+                            <img src="{{ asset('images/chamadas/' . $image->imagem) }}"
+                                class="absolute block w-full h-full" alt="...">
+                        </a>
+                    @else
                         <img src="{{ asset('images/chamadas/' . $image->imagem) }}" class="absolute block w-full h-full"
                             alt="...">
-                    </a>
-                @else
-                    <img src="{{ asset('images/chamadas/' . $image->imagem) }}" class="absolute block w-full h-full"
-                        alt="...">
-                @endif
-            </div>
+                    @endif
+                </div>
+            @endforeach
         @else
             <!-- Carousel wrapper -->
             <div class="relative h-56 overflow-hidden md:h-[32rem]">

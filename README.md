@@ -1,66 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Projeto Site Para Igreja Católica
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Esse é um projeto de site desenvolvido utilizando o framework Laravel 9, criado especificamente para atender às necessidades da comunidade da Igreja Católica. Este site visa proporcionar uma plataforma interativa e informativa para os membros da paróquia, bem como para visitantes interessados.
 
-## About Laravel
+## Funcionalidades Principais
+### 1. Página Inicial
+- Boas-vindas e Carrosel com imagens personalizáveis.
+- Links rápidos para seções importantes.
+### 2. Atendimentos
+- Informações sobre os horários de confissão e celebrações especiais.
+- Horários de Celebrações normais, atendimentos da Secretaria e do Padre.
+### 3. Grupos da Paróquia
+-  Orários e localização dos Grupos da paróquia
+### 4. Área de Doações
+- Local para:
+  - QRcode para doação
+  - Conta Bancário, Agência e banco
+### 4. Contato e Localização
+- Informações de contato da paróquia.
+- Mapa interativo para localização fácil.
+## Tecnologias Utilizadas
+- <b>Laravel 9:</b> Framework PHP robusto e moderno.
+- MySQL: Banco de dados para armazenamento de informações.
+- Tailwind: Para um design responsivo e atraente.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Como Contribuir
+- Clone o repositório.
+- Instale as dependências usando o Composer.
+- Configure o ambiente e o banco de dados.
+- Desenvolva novas funcionalidades ou corrija problemas.
+- Envie pull requests para revisão.
+## Como Configurar Localmente
+- Clone o repositório: <b>'git clone https://github.com/jscvip202/psvicentepallottilaravel9.git'</b>
+- Instale as dependências: <b>'composer install'</b>
+- Copie o arquivo de configuração: <b>'cp .env.example .env'</b>
+- Configure o banco de dados no arquivo <b>'.env'</b>
+- Gere a chave de aplicação: <b>'php artisan key:generate'</b>
+- Execute as migrações do banco de dados: <b>'php artisan migrate'</b>
+- Inicie o servidor: <b>'php artisan serve'</b>
+## Licença
+Este projeto é licenciado sob a [Licença MIT](https://github.com/jscvip2020/psvicentepallottilaravel9/blob/0941bef7b61965d47ddc28e13164c542ecbb084e/LICENSE).
+##
+Sinta-se à vontade para contribuir, relatar problemas ou sugerir melhorias. Juntos, podemos fazer do <b>Site para Igreja Católica</b> uma experiência digital significativa para a comunidade católica.

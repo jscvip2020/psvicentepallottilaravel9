@@ -36,6 +36,7 @@
     </div>
 
     @vite(['resources/js/app.js'])
+    <script src="../build/assets/flowbite.min-3bbc2e11.js"></script>
     @if(isset($script))
     {{ $script}}
     @endif

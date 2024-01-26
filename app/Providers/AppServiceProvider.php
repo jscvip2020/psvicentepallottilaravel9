@@ -6,6 +6,7 @@ use App\Models\Contato;
 use App\Models\RedeSocial;
 use App\Models\Tipoatendimento;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        if($this->app->environment('production')) {
+            $this->app['request']->server->set('HTTPS','on');
+            URL::forceScheme('https');
+        }
 
         view()->composer(['layouts.footer', 'layouts.navigationfront'], function ($view) {
             $redes = RedeSocial::where('status', 1)->get();

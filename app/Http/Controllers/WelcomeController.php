@@ -47,15 +47,15 @@ class WelcomeController extends Controller
         ]);
 
 
-
-        $send = Mail::to(($email)?$email:'jscvip@gmail.com', env('APP_NAME'))->send(new Contato([
+        $send = Mail::to(($email)?$email:'jscvip@gmail.com')->send(new Contato([
             'fromName' => $request->nome." ".$request->sobrenome,
             'fromEmail' => $request->email,
             'assunto' => $request->assunto,
             'mensagem' => $request->mensagem,
         ]));
-        $sendResposta = Mail::to( $request->email,  $request->nome." ".$request->sobrenome)->send(new RespostaContato([
-            'fromName' =>env('APP_NAME'),
+
+        $sendResposta = Mail::to( $request->email)->send(new RespostaContato([
+            'fromName' => 'Paróquia São Vicente Pallotti',
             'fromEmail' =>($email)?$email:'jscvip@gmail.com',
             'assunto' => 'Recebemos seu contato',
         ]));

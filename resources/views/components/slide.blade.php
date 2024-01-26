@@ -35,6 +35,7 @@
                 @endforeach
 
             </div>
+            @endif
             <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
                 @for ($i = 0; $i < count($images); $i++)
@@ -69,6 +70,6 @@
                     <span class="sr-only">Proximo</span>
                 </span>
             </button>
-        @endif
+        
     </div>
 </div>

@@ -3,7 +3,7 @@
       <div class="md:flex items-center">
         <div class="flex justify-cente items-center">
          <x-application-logo class="block h-8 w-auto fill-current text-white" />
-         <span class="ml-4 block">{{env('APP_NAME') }}</span>
+         <span class="ml-4 block">{{config('app.name') }}</span>
         </div>
          <span class="ml-2 flex justify-center">&copy; 2024 - {{ date("Y") }}</span>
       </div>

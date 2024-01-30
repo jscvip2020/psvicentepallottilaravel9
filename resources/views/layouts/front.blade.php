@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-        @isset($title){{ $title }} - @endisset{{ env('APP_NAME') }}
+        @isset($title){{ $title }} - @endisset{{ config('app.name','Jose Sergio Cordeiro') }}
         </title>
 
         <link rel="icon" href="{{ asset('images/logo.png') }}">
 
         <meta property="og:url" content="{{ url()->current()}}" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="@isset($title){{ $title }} - @endisset{{ env('APP_NAME') }}" />
+        <meta property="og:title" content="@isset($title){{ $title }} - @endisset{{ config('app.name') }}" />
         <meta property="og:description" content="@isset($description){{ $description }}@endisset" />
         <meta property="og:image" content="@isset($imagemface){{ $imagemface }}@endisset" />
 

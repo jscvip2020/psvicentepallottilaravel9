@@ -7,6 +7,7 @@ use App\Mail\RespostaContato;
 use App\Models\Chamada;
 use App\Models\Contato as ModelsContato;
 use App\Models\Grupo;
+use App\Models\RedeSocial;
 use App\Models\TipoAtendimento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -38,6 +39,8 @@ class WelcomeController extends Controller
 
         $email = ModelsContato::pluck('email')->first();
 
+        $social = RedeSocial::all();
+
         $validado = $request->validate([
             'nome' => 'required',
             'sobrenome' => 'required',
@@ -48,13 +51,18 @@ class WelcomeController extends Controller
 
 
         $send = Mail::to(($email)?$email:'jscvip@gmail.com')->send(new Contato([
+            'social' => $social,
             'fromName' => $request->nome." ".$request->sobrenome,
             'fromEmail' => $request->email,
             'assunto' => $request->assunto,
             'mensagem' => $request->mensagem,
         ]));
 
+        $contatoParoquia = ModelsContato::first();
+
         $sendResposta = Mail::to( $request->email)->send(new RespostaContato([
+            'contato' => $contatoParoquia,
+            'social' => $social,
             'fromName' => 'Paróquia São Vicente Pallotti',
             'fromEmail' =>($email)?$email:'jscvip@gmail.com',
             'assunto' => 'Recebemos seu contato',

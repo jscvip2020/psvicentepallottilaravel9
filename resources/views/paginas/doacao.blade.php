@@ -38,7 +38,7 @@
                 </ul>
             @endif
 
-            <p class="text-3xl pt-3">Mitra - {{ env('APP_NAME') }}</p>
+            <p class="text-3xl pt-3">Mitra - {{ config('app.name') }}</p>
             @if (isset($doacao->cnpj))
                 <p class="text-3xl pt-3"><b>CNPJ: </b> 75.858.506/0032-31</p>
             @endif

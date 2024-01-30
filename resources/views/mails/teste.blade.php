@@ -8,7 +8,7 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="telephone=no" name="format-detection">
-    <title>Resposta Email - {{ config('APP_NAME', 'Igreja') }}</title><!--[if (mso 16)]>
+    <title>Empty template</title><!--[if (mso 16)]>
     <style type="text/css">
     a {text-decoration: none;}
     </style>
@@ -475,19 +475,11 @@
                                                             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr>
                                                                 <td class="es-m-txt-c" align="left"
-                                                                    style="padding:0;Margin:0;font-size:0px">
-                                                                    @if (file_exists('images/logo.png'))
-                                                                        <img src="https://paroquiasaovicentepallotti.org.br/images/logo.png"
-                                                                            alt
-                                                                            style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
-                                                                            width="80">
-                                                                    @else
-                                                                        <img src="https://paroquiasaovicentepallotti.org.br/images/logodefault.png"
-                                                                            alt
-                                                                            style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
-                                                                            width="80">
-                                                                    @endif
-                                                                </td>
+                                                                    style="padding:0;Margin:0;font-size:0px"><img
+                                                                        src="https://ffcxoaf.stripocdn.email/content/guids/CABINET_ff06f0f6afff91e4506ef568b46158c8/images/44591551869356388.png"
+                                                                        alt
+                                                                        style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
+                                                                        width="80"></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -509,18 +501,34 @@
                                                                         role="presentation"
                                                                         style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                                         <tr>
-                                                                            @foreach ($data["social"] as $social)
                                                                             <td valign="top" align="center"
                                                                                 style="padding:0;Margin:0;padding-right:10px">
-                                                                                <a href="{{$social->url}}" target="_blank">
-                                                                                <img title="{{$social->nome}}"
-                                                                                    src="https://ffcxoaf.stripocdn.email/content/assets/img/social-icons/circle-black/{{strtolower($social->nome)}}-circle-black.png"
-                                                                                    alt="{{$social->nome}}" width="32"
+                                                                                <img title="Facebook"
+                                                                                    src="https://ffcxoaf.stripocdn.email/content/assets/img/social-icons/circle-black/facebook-circle-black.png"
+                                                                                    alt="Fb" width="32"
                                                                                     style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic">
-                                                                                </a>
                                                                             </td>
-                                                                            @endforeach
-
+                                                                            <td valign="top" align="center"
+                                                                                style="padding:0;Margin:0;padding-right:10px">
+                                                                                <img title="Twitter"
+                                                                                    src="https://ffcxoaf.stripocdn.email/content/assets/img/social-icons/circle-black/twitter-circle-black.png"
+                                                                                    alt="Tw" width="32"
+                                                                                    style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic">
+                                                                            </td>
+                                                                            <td valign="top" align="center"
+                                                                                style="padding:0;Margin:0;padding-right:10px">
+                                                                                <img title="Instagram"
+                                                                                    src="https://ffcxoaf.stripocdn.email/content/assets/img/social-icons/circle-black/instagram-circle-black.png"
+                                                                                    alt="Inst" width="32"
+                                                                                    style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic">
+                                                                            </td>
+                                                                            <td valign="top" align="center"
+                                                                                style="padding:0;Margin:0"><img
+                                                                                    title="Youtube"
+                                                                                    src="https://ffcxoaf.stripocdn.email/content/assets/img/social-icons/circle-black/youtube-circle-black.png"
+                                                                                    alt="Yt" width="32"
+                                                                                    style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic">
+                                                                            </td>
                                                                         </tr>
                                                                     </table>
                                                                 </td>
@@ -557,9 +565,7 @@
                                                                 <td align="left" style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">
-                                                                        Agradecemos por sua Mensagem!<br />
-                                                                        Em breve responderemos o contato!
-                                                                    </p>
+                                                                        Mensagem</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -594,7 +600,7 @@
                                                                 <td align="left" style="padding:0;Margin:0">
                                                                     <h3
                                                                         style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#333333">
-                                                                        {{ config('APP_NAME', 'Igreja') }}</h3>
+                                                                        David James Ward</h3>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -621,13 +627,11 @@
                                                                 <td align="center" class="es-m-txt-c es-m-p0l"
                                                                     style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px;padding-left:10px;font-size:0px">
                                                                     <a target="_blank" href="https://viewstripo.email"
-                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px">
-                                                                        @if (file_exists('images/logo.png'))
-                                                                        <img src="https://paroquiasaovicentepallotti.org.br/images/logo.png"  alt="Logo" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="88" title="Logo">
-                                                                        @else
-                                                                        <img src="https://paroquiasaovicentepallotti.org.br/images/logodefault.png"  alt="Logo" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="88" title="Logo">
-                                                                    @endif
-                                                                        </a></td>
+                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#2CB543;font-size:14px"><img
+                                                                            src="https://ffcxoaf.stripocdn.email/content/guids/CABINET_39aaffc6075780e4950ea4e6bba53a4f/images/12401614067864226.png"
+                                                                            alt="Logo"
+                                                                            style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
+                                                                            width="88" title="Logo"></a></td>
                                                             </tr>
                                                         </table>
                                                     </td>
@@ -674,11 +678,10 @@
                                                             <tr>
                                                                 <td align="left" class="es-m-p10l"
                                                                     style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px">
-                                                                    <p  style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">
-                                                                        {{$data["contato"]["logradouro"]}}, {{$data["contato"]["numero"]}}<br/>
-                                                                        {{$data["contato"]["bairro"]}}<br/>
-                                                                        {{$data["contato"]["cep"]}} - {{$data["contato"]["localidade"]}}-{{$data["contato"]["uf"]}}
-                                                                    </p>
+                                                                    <p
+                                                                        style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">
+                                                                        4019 Middle Passage, Badwater, Manitoba,
+                                                                        R1H-5T3, CA</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -718,23 +721,20 @@
                                                                         width="100%" class="es-menu"
                                                                         role="presentation"
                                                                         style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                                                                        @php
-                                                                            $teste = ['(', ')', ' ', '-'];
-                                                                        @endphp
                                                                         <tr class="links-images-left">
                                                                             <td align="left" valign="top"
                                                                                 width="100%"
                                                                                 style="Margin:0;padding-right:5px;padding-top:10px;padding-bottom:3px;padding-left:10px;border:0"
                                                                                 id="esd-menu-id-0"><a target="_blank"
-                                                                                    href="tel:55{{str_replace($teste, '', $data['contato']['telefone'])}}"
+                                                                                    href="tel:+00012345678"
                                                                                     style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#333333;font-size:14px"><img
                                                                                         src="https://ffcxoaf.stripocdn.email/content/guids/CABINET_39aaffc6075780e4950ea4e6bba53a4f/images/2901615383750955.png"
-                                                                                        alt="{{$data["contato"]["telefone"]}}"
-                                                                                        title="{{$data["contato"]["telefone"]}}"
+                                                                                        alt="+000 123 456 78"
+                                                                                        title="+000 123 456 78"
                                                                                         align="absmiddle"
                                                                                         width="16"
-                                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-right:10px;vertical-align:middle">
-                                                                                        {{$data["contato"]["telefone"]}}</a></td>
+                                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-right:10px;vertical-align:middle">+000
+                                                                                    123 456 78</a></td>
                                                                         </tr>
                                                                     </table>
                                                                 </td>
@@ -750,15 +750,15 @@
                                                                                 width="100%"
                                                                                 style="Margin:0;padding-right:5px;padding-top:10px;padding-bottom:3px;padding-left:10px;border:0"
                                                                                 id="esd-menu-id-0"><a target="_blank"
-                                                                                    href="https://wa.me/55{{str_replace($teste, '', $data['contato']['celular'])}}"
+                                                                                    href="tel:+00012345678"
                                                                                     style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#333333;font-size:14px"><img
                                                                                         src="https://ffcxoaf.stripocdn.email/content/guids/CABINET_39aaffc6075780e4950ea4e6bba53a4f/images/2901615383750955.png"
-                                                                                        alt="{{$data['contato']['celular']}}"
-                                                                                        title="{{$data['contato']['celular']}}"
+                                                                                        alt="+000 123 456 78"
+                                                                                        title="+000 123 456 78"
                                                                                         align="absmiddle"
                                                                                         width="16"
-                                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-right:10px;vertical-align:middle">
-                                                                                        {{$data['contato']['celular']}}</a></td>
+                                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-right:10px;vertical-align:middle">+000
+                                                                                    123 456 78</a></td>
                                                                         </tr>
                                                                     </table>
                                                                 </td>
@@ -774,16 +774,14 @@
                                                                                 width="100%"
                                                                                 style="Margin:0;padding-right:5px;padding-top:3px;padding-bottom:3px;padding-left:10px;border:0"
                                                                                 id="esd-menu-id-0"><a target="_blank"
-                                                                                    href="mailto:{{$data['contato']['email']}}"
+                                                                                    href="mailto:David@technology.co"
                                                                                     style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#333333;font-size:14px"><img
                                                                                         src="https://ffcxoaf.stripocdn.email/content/guids/CABINET_39aaffc6075780e4950ea4e6bba53a4f/images/11441615383749960.png"
-                                                                                        alt="{{$data['contato']['email']}}"
-                                                                                        title="{{$data['contato']['email']}}"
+                                                                                        alt="David@technology.co"
+                                                                                        title="David@technology.co"
                                                                                         align="absmiddle"
                                                                                         width="16"
-                                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-right:10px;vertical-align:middle">
-                                                                                        {{$data['contato']['email']}}
-                                                                                    </a>
+                                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-right:10px;vertical-align:middle">David@technology.co</a>
                                                                             </td>
                                                                         </tr>
                                                                     </table>

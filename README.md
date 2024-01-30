@@ -33,13 +33,33 @@ Esse é um projeto de site desenvolvido utilizando o framework Laravel 9, criado
 - Envie pull requests para revisão.
 ## Como Configurar Localmente
 - Clone o repositório: 
-  ``` git clone https://github.com/jscvip202/psvicentepallottilaravel9.git```
-- Instale as dependências: ```composer install```
-- Copie o arquivo de configuração: ```cp .env.example .env```
-- Configure o banco de dados no arquivo ```.env```
-- Gere a chave de aplicação: ```php artisan key:generate```
-- Execute as migrações do banco de dados: ```php artisan migrate```
-- Inicie o servidor: ```php artisan serve```
+  ```
+  git clone https://github.com/jscvip202/psvicentepallottilaravel9.git
+  ```
+- Instale as dependências: 
+```
+composer install
+```
+- Copie o arquivo de configuração: 
+```
+cp .env.example .env
+```
+- Configure o banco de dados no arquivo 
+  ```
+  .env
+  ```
+- Gere a chave de aplicação: 
+  ```
+  php artisan key:generate
+  ```
+- Execute as migrações do banco de dados: 
+  ```
+  php artisan migrate
+  ```
+- Inicie o servidor: 
+  ```
+  php artisan serve
+  ```
 ## Licença
 Este projeto é licenciado sob a [Licença MIT](https://github.com/jscvip2020/psvicentepallottilaravel9/blob/0941bef7b61965d47ddc28e13164c542ecbb084e/LICENSE).
 ##

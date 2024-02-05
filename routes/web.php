@@ -6,6 +6,7 @@ use App\Http\Controllers\DoacaoController;
 use App\Http\Controllers\GrupoController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\ImagemController;
+use App\Http\Controllers\PopupController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RedeSocialController;
 use App\Http\Controllers\TipoatendimentoController;
@@ -42,6 +43,9 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
 
     route::resource('redesocial', RedeSocialController::class)->except(['show','create']);
     route::get('redesocial/status/{id}',[RedeSocialController::class,'status'])->name('redesocial.status');
+
+    route::resource('popup', PopupController::class)->except(['show','create']);
+    route::get('popup/status/{id}',[PopupController::class,'status'])->name('popup.status');
 
 });
 

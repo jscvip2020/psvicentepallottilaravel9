@@ -48,8 +48,8 @@ class ImagemController extends Controller
             ]);
         }
 
-        $name = $request->tipo.".".$request->file('imagem')->extension();
-        $path = Storage::putFileAs('/', $request->file('imagem'),$name);
+        $name = $request->tipo . "." . $request->file('imagem')->extension();
+        $path = Storage::putFileAs('/', $request->file('imagem'), $name);
 
         if ($path) {
             $action = Imagem::create([
@@ -81,7 +81,7 @@ class ImagemController extends Controller
             (object)['id' => 'imgcontato', 'nome' => 'Imagem contato'],
             (object)['id' => 'grupos', 'nome' => 'Grupos']
         ])->keyBy('id')->pluck('nome', 'id');
-        return view('back.imagens.index', compact(['imagem', 'imagens','tipos']));
+        return view('back.imagens.index', compact(['imagem', 'imagens', 'tipos']));
     }
 
     /**
@@ -93,35 +93,39 @@ class ImagemController extends Controller
         if ($request->tipo == "logo") {
             $validado = $request->validate([
                 'imagem' => 'required|image|mimes:png|dimensions:ratio=1/1',
-                'tipo' => 'required|unique:imagems,tipo,'.$imagem->id,
+                'tipo' => 'required|unique:imagems,tipo,' . $imagem->id,
             ]);
         } elseif ($request->tipo == "secretaria" || $request->tipo == "atendimento" || $request->tipo == "confissao" || $request->tipo == "missa" || $request->tipo == "grupos") {
             $validado = $request->validate([
                 'imagem' => 'required|image|mimes:jpg,png|dimensions:ratio=1/1',
-                'tipo' => 'required|unique:imagems',
+                'tipo' => 'required|unique:imagems,tipo,' . $imagem->id,
             ]);
         } else {
             $validado = $request->validate([
                 'imagem' => 'required|image|mimes:jpg,png',
-                'tipo' => 'required|unique:imagems',
+                'tipo' => 'required|unique:imagems,tipo,' . $imagem->id,
             ]);
         }
+        
+        Storage::delete('/' . $imagem->imagem);
+        $arquivodeletado = Storage::get('/' . $imagem->imagem);
 
-
-        $file = $request->file('imagem');
-        if ($file) {
-            $name = $request->tipo.".".$request->file('imagem')->extension();
-            $path = Storage::putFileAs('/', $request->file('imagem'),$name);
-            if ($path) {
+        if (!$arquivodeletado) {
+            $file = $request->file('imagem');
+            if ($file) {
+                $name = $request->tipo . "." . $request->file('imagem')->extension();
+                $path = Storage::putFileAs('/', $request->file('imagem'), $name);
+                if ($path) {
+                    $action = $imagem->update([
+                        'imagem' => $name,
+                        'tipo' => $request->tipo,
+                    ]);
+                }
+            } else {
                 $action = $imagem->update([
-                    'imagem' => $name,
                     'tipo' => $request->tipo,
                 ]);
             }
-        }else{
-            $action = $imagem->update([
-                'tipo' => $request->tipo,
-            ]);
         }
 
 
@@ -137,16 +141,16 @@ class ImagemController extends Controller
      */
     public function destroy(Imagem $imagem)
     {
-        Storage::delete('/'.$imagem->imagem);
-        $arquivodeletado = Storage::get('/'.$imagem->imagem);
+        Storage::delete('/' . $imagem->imagem);
+        $arquivodeletado = Storage::get('/' . $imagem->imagem);
 
-        if(!$arquivodeletado){
+        if (!$arquivodeletado) {
             $action = $imagem->delete();
-        if ($action) {
-            return redirect()->route('imagem.index')->with('success', 'Imagem deletado com sucesso!');
-        } else {
-            return redirect()->route('imagem.index')->with('error', 'Imagem não pode ser deletado!');
-        }
+            if ($action) {
+                return redirect()->route('imagem.index')->with('success', 'Imagem deletado com sucesso!');
+            } else {
+                return redirect()->route('imagem.index')->with('error', 'Imagem não pode ser deletado!');
+            }
         }
     }
 }

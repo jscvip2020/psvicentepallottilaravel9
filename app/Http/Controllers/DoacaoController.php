@@ -27,7 +27,7 @@ class DoacaoController extends Controller
             'imgtopo' => 'nullable|image|mimes:JPG,JPEG,jpeg,jpg,png|dimensions:ratio=4/1',
             'qrcode' => 'nullable|image|mimes:JPG,JPEG,jpeg,jpg,png|dimensions:ratio=1/1',
             'banco' => 'nullable|min:5',
-            'agencia' => 'nullable|min:5|required_unless:banco,null',
+            'agencia' => 'nullable|min:4|required_unless:banco,null',
             'conta' => 'nullable|min:5|required_unless:banco,null',
             'cnpj' => 'nullable|cnpj',
         ]);
@@ -93,8 +93,8 @@ class DoacaoController extends Controller
         $validado = $request->validate([
             'imgtopo' => 'nullable|image|mimes:JPG,JPEG,jpeg,jpg,png|dimensions:ratio=4/1',
             'qrcode' => 'nullable|image|mimes:JPG,JPEG,jpeg,jpg,png|dimensions:ratio=1/1',
-            'banco' => 'nullable|min:5',
-            'agencia' => 'nullable|min:5|required_unless:banco,null',
+            'banco' => 'nullable',
+            'agencia' => 'nullable|required_unless:banco,null',
             'conta' => 'nullable|min:5|required_unless:banco,null',
             'cnpj' => 'nullable|cnpj',
         ]);

@@ -17,13 +17,14 @@ Esse é um projeto de site desenvolvido utilizando o framework Laravel 9, criado
 - Local para:
   - QRcode para doação
   - Conta Bancário, Agência e banco
-### 4. Contato e Localização
+### 5. Contato e Localização
 - Informações de contato da paróquia.
 - Mapa interativo para localização fácil.
 ## Tecnologias Utilizadas
-- <b>Laravel 9:</b> Framework PHP robusto e moderno.
-- MySQL: Banco de dados para armazenamento de informações.
-- Tailwind: Para um design responsivo e atraente.
+
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white) | ![MySQL](https://img.shields.io/badge/MYSQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) | ![PHP](https://img.shields.io/badge/PHP-777bb4?style=for-the-badge&logo=php&logoColor=white) | ![Tailwind](https://img.shields.io/badge/Tailwind-38b2ac?style=for-the-badge&logo=mysql&logoColor=white) | ![Node](https://img.shields.io/badge/Node-00000F?style=for-the-badge&logo=node.js&logoColor=white) | ![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=Composer&logoColor=white)
+:-:|:-:|:-:|:-:|:-:|:-:
+9|8.0.31|8.2|3.4.1|v20.9.0|2.6.5
 
 ## Como Contribuir
 - Clone o repositório.

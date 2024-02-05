@@ -27,6 +27,8 @@
                             <span class="fas fa-money-bill-1-wave text-5xl text-purple-950"></span>
                         @elseif($menu['text'] == 'Redes Sociais')
                             <span class="fab fa-connectdevelop text-5xl text-red-950"></span>
+                        @elseif($menu['text'] == 'Popup')
+                            <span class="fas fa-images text-5xl text-red-950"></span>
                         @endif
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{ $menu['text'] }}

@@ -5,7 +5,7 @@
     "src": "node_modules/flowbite/dist/flowbite.min.js?commonjs-entry"
   },
   "resources/css/app.css": {
-    "file": "assets/app-bcc7a4a6.css",
+    "file": "assets/app-8a3a5ab2.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },

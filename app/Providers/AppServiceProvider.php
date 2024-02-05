@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use App\Models\Contato;
 use App\Models\RedeSocial;
-use App\Models\Tipoatendimento;
+use App\Models\TipoAtendimento;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
@@ -28,12 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
 
-        if($this->app->environment('production')) {
-            $this->app['request']->server->set('HTTPS','on');
-            URL::forceScheme('https');
-        }
+        Schema::defaultStringLength(191);
 
         view()->composer(['layouts.footer', 'layouts.navigationfront'], function ($view) {
             $redes = RedeSocial::where('status', 1)->get();
@@ -46,7 +42,7 @@ class AppServiceProvider extends ServiceProvider
                 ['text' => 'Padroeiro', 'link' => route('pages.padroeiro')],
                 ['text' => 'Contato', 'link' => route('pages.contatos')],
             ];
-            $atendimentos = Tipoatendimento::all();
+            $atendimentos = TipoAtendimento::all();
 
             $view->with(['menus' => $menus, 'atendimentos' => $atendimentos]);
         });
@@ -60,6 +56,7 @@ class AppServiceProvider extends ServiceProvider
                 ['text' => 'Contato', 'route' => 'contato.index', 'link' => route('contato.index')],
                 ['text' => 'Doação', 'route' => 'doacao.index', 'link' => route('doacao.index')],
                 ['text' => 'Redes Sociais', 'route' => 'redesocial.index', 'link' => route('redesocial.index')],
+                ['text' => 'Popup', 'route' => 'popup.index', 'link' => route('popup.index')],
             ];
             $view->with('menusDash', $menusDash);
         });

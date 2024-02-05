@@ -29,18 +29,17 @@
             @if (isset($doacao->banco))
                 <ul class=" mt-7 text-violet-950 font-black md:text-5xl text-3xl">
                     <li class="flex mb-4"><span class="block text-right w-1/3">Banco: </span><span
-                            class="text-left pl-2">Banco
-                            do Brasil</span></li>
+                            class="text-left pl-2">{{$doacao->banco}}</span></li>
                     <li class="flex mb-4"><span class="block text-right w-1/3">Agência: </span><span
-                            class="text-left pl-2">0645-9</span></li>
+                            class="text-left pl-2">{{$doacao->agencia}}</span></li>
                     <li class="flex mb-4"><span class="block text-right w-1/3">Conta: </span><span
-                            class="text-left pl-2">xxxxx-x</span></li>
+                            class="text-left pl-2">{{$doacao->conta}}</span></li>
                 </ul>
             @endif
 
             <p class="text-3xl pt-3">Mitra - {{ config('app.name') }}</p>
             @if (isset($doacao->cnpj))
-                <p class="text-3xl pt-3"><b>CNPJ: </b> 75.858.506/0032-31</p>
+                <p class="text-3xl pt-3"><b>CNPJ: </b> {{$doacao->cnpj}}</p>
             @endif
         </div>
         <div class="m-4 md:w-1/2" style="display: flex;flex-direction: column;align-items: center;">

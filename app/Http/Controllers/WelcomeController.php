@@ -7,6 +7,7 @@ use App\Mail\RespostaContato;
 use App\Models\Chamada;
 use App\Models\Contato as ModelsContato;
 use App\Models\Grupo;
+use App\Models\Popup;
 use App\Models\RedeSocial;
 use App\Models\TipoAtendimento;
 use Illuminate\Http\Request;
@@ -26,12 +27,22 @@ class WelcomeController extends Controller
     public function index()
     {
 
+        $hoje = date('Y-m-d');
+
         $images = Chamada::where('status', 1)->get();
         $atendimentos = TipoAtendimento::all();
         $grupos = Grupo::all();
+        $popup1 = Popup::where('status', 1)->first();
 
+        $popup2 = Popup::where([['datafim', '>=', $hoje], ['dataini', '<=', $hoje]])->first();
 
-        return view('welcome', compact(['images', 'atendimentos', 'grupos']));
+        if ($popup1) {
+            $popup = $popup1;
+        } else {
+            $popup = $popup2;
+        }
+
+        return view('welcome', compact(['images', 'atendimentos', 'grupos', 'popup']));
     }
 
     public function send(Request $request)
@@ -50,9 +61,9 @@ class WelcomeController extends Controller
         ]);
 
 
-        $send = Mail::to(($email)?$email:'jscvip@gmail.com')->send(new Contato([
+        $send = Mail::to(($email) ? $email : 'jscvip@gmail.com')->send(new Contato([
             'social' => $social,
-            'fromName' => $request->nome." ".$request->sobrenome,
+            'fromName' => $request->nome . " " . $request->sobrenome,
             'fromEmail' => $request->email,
             'assunto' => $request->assunto,
             'mensagem' => $request->mensagem,
@@ -60,14 +71,14 @@ class WelcomeController extends Controller
 
         $contatoParoquia = ModelsContato::first();
 
-        $sendResposta = Mail::to( $request->email)->send(new RespostaContato([
+        $sendResposta = Mail::to($request->email)->send(new RespostaContato([
             'contato' => $contatoParoquia,
             'social' => $social,
             'fromName' => 'Paróquia São Vicente Pallotti',
-            'fromEmail' =>($email)?$email:'jscvip@gmail.com',
+            'fromEmail' => ($email) ? $email : 'jscvip@gmail.com',
             'assunto' => 'Recebemos seu contato',
         ]));
 
-        return redirect()->route('pages.contatos')->with('success','Email Enviado com sucesso!');
+        return redirect()->route('pages.contatos')->with('success', 'Email Enviado com sucesso!');
     }
 }

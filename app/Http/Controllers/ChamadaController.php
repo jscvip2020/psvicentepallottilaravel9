@@ -25,7 +25,7 @@ class ChamadaController extends Controller
     public function store(Request $request)
     {
         $validado = $request->validate([
-            'imagem' => 'required|image|mimes:JPG,JPEG,jpeg,jpg,png|dimensions:ratio=16/9',
+            'imagem' => 'required|image|mimes:JPG,JPEG,jpeg,jpg,png',
             'url' => 'nullable|min:5',
         ]);
         $file = $request->file('imagem');
@@ -61,7 +61,7 @@ class ChamadaController extends Controller
     public function update(Request $request, Chamada $chamada)
     {
         $validado = $request->validate([
-            'imagem' => 'nullable|image|mimes:JPG,JPEG,jpeg,jpg,png|dimensions:ratio=16/9',
+            'imagem' => 'nullable|image|mimes:JPG,JPEG,jpeg,jpg,png',
             'url' => 'nullable|min:5',
         ]);
         $file = $request->file('imagem');
